@@ -12,6 +12,8 @@ public class RaceConditionDemo {
         john.setName("John");
         anita.setName("Anita");
         john.start();
+        john.run();
+        anita.start();
         anita.start();
     }
 }
@@ -40,10 +42,10 @@ class BankAccount implements Runnable{
     @Override
     public void run() {
         System.out.println(Thread.currentThread().getName() +Thread.currentThread().getState());
-        makeWithdrawal(75);
-        if (balance<75){
-            System.out.println("Money overdrawn!!");
-        }
+//        makeWithdrawal(75);
+//        if (balance<75){
+//            System.out.println("Money overdrawn!!");
+//        }
     }
     private synchronized void makeWithdrawal(int amount){System.out.println(Thread.currentThread().getName() +Thread.currentThread().getState());
         if (balance>=amount){

@@ -6,4 +6,5 @@ public class IDGenerator {
     long getNewId(){
         return id++;
     }
+
 }
